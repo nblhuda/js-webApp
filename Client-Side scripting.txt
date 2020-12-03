@@ -1,0 +1,15 @@
+Intro to client-side scripting
+- performed to generate a code that can run on the browser
+- place inside html document
+- used to examine the user's form for the error before submitting it 
+- HTML, CSS, JavaScript
+- client used at the front end 
+- does not need any server
+- Insecure
+
+Usability
+- can mofdify a page w/o having post back to the server (faster UI)
+Efficiency
+- can make small, quick changes to page w/o waiting for server
+Event-driven
+- can respond to user actions like clicks and key presses

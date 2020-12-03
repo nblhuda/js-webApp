@@ -1,0 +1,23 @@
+Intro to js
+Use
+- create speacial effects
+- validate forms
+- browser compatibilities
+- Custom pages
+
+values
+- fixed (literals)
+- variable (variables)
+
+JavaScript Arithmetic
+Escape Sequence
+output operations
+
+internal - dlm html .html
+external - save file in .js and .html
+
+within same page= macam bookmark
+within website = 
+
+Madam, kalau open local file tu macam mana?
+input type="file"
