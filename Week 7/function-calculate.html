@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <form>
+            Enter Calories : <input type="text" id="calorie"><br><br>
+            Enter Activity [1,2,3]: <input type="text" id="activity"><br><br>
+            <input type="button" value="Calculate" onclick="calcBMR()">
+        </form>
+        <script>
+            function calcBMR()
+            {
+                var calories = document.getElementById("calorie").value;
+                var activity = document.getElementById("activity").value;
+                if(activity == 1)
+                    bmr = calories * 1.2;
+                else if(activity == 2)
+                    bmr = calories * 1.55;
+                else if(activity == 3)
+                    bmr = calories * 1.9;
+                document.write("Daily kilocalories needed based on activity : " + bmr); 
+            }
+        </script>
+    </body>
+</html>
