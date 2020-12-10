@@ -1,0 +1,17 @@
+<!-- create a js program that accepts integers from users until terminated by # symbol -->
+
+<html>
+    <body>
+        <script>
+            var number = parseInt(prompt("Enter an integer number"));
+
+            // isNaN - not a number
+            while (isNaN(number)==false){
+                document.write("<br>You entered: " + number);
+                var number = parseInt(prompt("Enter an integer number"));
+                
+            }
+        </script>
+        
+    </body>
+</html>
