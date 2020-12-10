@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <script language=JavaScript>
+
+      function plus()
+      {
+        var n1;
+        var n2;
+        var no=0; 
+        with(document.addmult) 
+        { 
+          
+          n1= parseFloat(num1.value);
+          n2= parseFloat(num2.value);
+        
+            if(num1.value==""||num2.value=="")
+            {
+              alert("You have left one or more fields blank. Please enter the necessary value. TQ")
+            }
+            else
+            {
+              result.value=n1+n2;
+            }
+
+        }
+      }
+
+      function times()
+      {
+      with(document.addmult) 
+      { 
+        var n1,n2;
+        n1=parseFloat(num1.value);
+        n2=parseFloat(num2.value);
+
+          if(num1.value==""||num2.value=="")
+          {
+            alert("You have left one or more fields blank. Please enter the necessary value. TQ")
+          }
+          else
+          {
+            result.value=n1*n2;
+          }
+
+      }
+      }
+
+
+    </script>
+
+  </head>
+
+  <body>
+    <form name=addmult>
+      Enter a number in each field:
+      <input type=text name=num1 value="" size=5>
+      <input type=text name=num2 value="" size=5><br>
+      <input type=button name=Button value=" + " onclick="plus()">
+      <input type=button name=Button value=" * " onclick="times()"><br>
+      <input type=reset value="Reset Form"><br><br>
+      <textarea name=result rows=3 cols=27 wrap=virtual></textarea>
+
+    </form>
+
+  </body>
+</html>

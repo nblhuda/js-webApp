@@ -1,0 +1,87 @@
+<html>
+<head>
+<title> Customer Registration Form </title> 
+<script>
+function calculate()
+{
+var qKB=0, qCM=0, dep=0, bal=0;
+qKB = document.getElementById("quantityKB").value;
+qCM = document.getElementById("quantityCM").value;
+var calPrice = (140 * qKB) + (150 * qCM);
+document.getElementById("totalAmount").value = calPrice;
+dep = document.getElementById("deposit").value;
+bal = calPrice - dep;
+document.getElementById("balance").value = bal;
+}
+function receipt()
+{
+alert("The receipt \n Name : " +document.getElementById("name").value+
+"\n Address : " +document.getElementById("address").value+
+"\n Contact number : " +document.getElementById("phone").value+
+"\n=============================\nTotal price : " +document.getElementById("totalAmount").value+
+"\n The Balance is "+document.getElementById("balance").value);
+}
+</script>
+</head>
+<body>
+<h1 style="text-align:center" > Rizalman Boutique </h1> <!-- 0.5m -->
+<form name = "registration" > <!-- 0.5m -->
+<fieldset>
+<legend>CUSTOMER INFO</legend> <!-- 0.5m -->
+<table border = "0" width = "500">
+<tr>
+<td>Customer Name</td>
+<td><input type = "text" id = "name" size = 50 ></td> 
+</tr>
+ <tr>
+<td>Address</td>
+<td><input type = "text" id = "address" size = 50 ></td> 
+</tr>
+<tr>
+<td>Contact Number</td>
+<td><input type = "text" id = "phone" size = 50 ></td> 
+</tr>
+</table>
+</fieldset> <!-- 0.5m -->
+<br />
+<fieldset>
+<legend>ORDER DETAILS</legend> <!-- 0.5m -->
+<table border = "0" width = "500">
+ <tr style="text-align:left">
+<th>Type of Baju</th> <!-- 0.5m -->
+<th>Quantity</th>
+</tr>
+<tr>
+<td>Baju Kebaya</td> <!-- 0.5m -->
+<td><input type = "text" id = "quantityKB" ></td> <!-- 0.5m -->
+</tr>
+<tr>
+<td>Baju Melayu Cekak Musang</td> <!-- 0.5m -->
+<td><input type = "text" id = "quantityCM" ></td> <!-- 0.5m -->
+</tr>
+</table>
+</fieldset> <!-- 0.5m -->
+<fieldset>
+<legend>PAYMENT DETAILS</legend> <!-- 0.5m -->
+<table border = "0" width = "500">
+<tr>
+<td>Total Amount: </td>
+<td><input type = "text" id = "totalAmount" > </td> <!-- 0.5m -->
+</tr>
+<tr>
+<td>Deposit</td>
+<td> <input type = "text" id = "deposit" ></td> <!-- 0.5m -->
+</tr>
+<tr>
+<td>Balance: </td>
+<td><input type = "text" id = "balance" ></td> <!-- 0.5m -->
+</tr>
+</table>
+</fieldset> <!-- 0.5m -->
+<br />
+<input type = "button" value = "CALCULATE" onclick="calculate()" >
+<input type = "button" value = "RECEIPT" onclick="receipt()" > <!-- 0.5m -->
+<input type = "reset" value = "CLEAR" onclick="reset()" > <!-- 0.5m -->
+</form> <!-- 0.5m -->
+</body>
+</html>

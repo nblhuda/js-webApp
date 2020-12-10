@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Getting checked values of Multiple Checkbox by javascript</title>
+    </head>
+    <body>
+        <p> Select your hobby </p>
+        <!-- form with input type checkbox -->
+        <form name="frmcheckbox" >
+            <input type="checkbox" id="1" name="hobby[]" value="Sleeping" 
+            onclick="getHobby()"> Sleeping<br>
+            <input type="checkbox" id="2" name="hobby[]" value="Reading" 
+            onclick="getHobby()"> Reading<br>
+            <input type="checkbox" id="3" name="hobby[]" value="Eating" 
+            onclick="getHobby()"> Eating<br>
+            <input type="checkbox" id="4" name="hobby[]" value="Cycling" 
+            onclick="getHobby()"> Cycling<br>
+            
+            Your selected your hobby
+            <input type="text" id="t" name="t" size="100">
+            <br><br>
+            Text area:
+            <textarea id="txtarea"></textarea>
+            <br><br>
+            Display in alert dialog box
+            <input type="button" value="Display" onclick="getHobby2()">
+        </form>
+
+        <script>
+            function getHobby()
+            {
+                var chks = document.getElementsByName('hobby[]');
+                // hobbies inside array hobby[]
+                var checkCount = 0;
+                var text = new Array();
+                var strtext = "";
+                for (var i = 0; i < chks.length; i++)
+                {
+                    if (chks[i].checked)
+                    {
+                        var arlength = text.length;
+                        text[arlength] = chks[i].value;
+                    }
+                }
+                strtext = text.join(",");
+                document.getElementById("t").value = strtext ;
+                document.getElementById("txtarea").value = strtext ;
+            }
+            function getHobby2()
+            {
+                var chks = document.getElementsByName('hobby[]');
+                var checkCount = 0;
+                var text = new Array();
+                var strtext = "";
+                for (var i = 0; i < chks.length; i++)
+                {
+                    if (chks[i].checked)
+                    {
+                    var arlength = text.length;
+                    text[arlength] = chks[i].value;
+                    } 
+                }
+                strtext = text.join(",");
+                alert("Your hobbies are = "+strtext) ;
+            }
+        </script>
+    </body>
+</html>

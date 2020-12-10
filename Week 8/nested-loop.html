@@ -1,0 +1,18 @@
+<!-- nested loop -->
+<html>
+    <body>
+        <script type="text/javascript">
+            var column, row;
+            document.writeln("<table border=1 cellpadding=3>");
+                for(row=1;row<=10;row++)
+                {
+                    document.write("<tr>");
+                        for(column=1;column<=12;column++){
+                            document.write("<td>"+row*column+ "</td>");
+                        }
+                        document.write("</tr>");
+                }
+                document.write("</table");
+        </script>
+    </body>
+</html>

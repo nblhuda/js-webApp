@@ -1,0 +1,21 @@
+<html>
+<head><title></title></head>
+<body>
+<script language = javascript>
+	var days = new Array("Ahad","Isnin","Selasa","Rabu","Khamis","Jumaat","Sabtu");
+	var mons = new Array("Jan","Feb","Mac","Apr","Mei","Jun","Jul","Ogos","Sep","Okt","Nov","Dis");
+	var now = new Date();
+
+	var dy = now.getDay(); dy = days[dy];	
+
+	var dd = now.getDate();
+	
+	var mm = now.getMonth(); mm = mons[mm];
+
+	var yy = now.getYear();
+
+	alert(dy+" "+dd+" "+mm+" "+yy);
+</script>
+
+</body>
+</html>
