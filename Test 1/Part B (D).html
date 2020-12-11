@@ -1,0 +1,23 @@
+<html>
+<body>
+    <script >
+        var num = parseInt(prompt("Enter an integer "));
+        var sum = 0;
+        var countNum = 0;
+
+        document.write("<br>You have entered: ");
+        while(isNaN(num)==false){
+            sum = sum + num;
+            countNum++;
+            document.write(" " + num);
+            num = parseInt(prompt("Enter an integer"));
+
+        }
+
+        var avg = sum/countNum;
+        document.write("<br> Sum is " + sum);
+        document.write("<br> Average is " + avg.toFixed(2));
+
+    </script>
+</body>
+</html>

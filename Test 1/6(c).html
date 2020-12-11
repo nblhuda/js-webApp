@@ -1,0 +1,31 @@
+<!-- nested loop -->
+<html>
+<head></head>
+<body>
+    <script>
+        document.write("<table border = 1 cellpadding=3>");
+        var k = 1;
+        for(var i = 0 ; i < 5 ; i++) 
+        { 
+            document.write("<tr>");
+            for(var j = 0 ; j<5 ; j++)
+            {
+                if(i%2 == 0 && j%2 != 0)
+                {
+                    document.write("<td bgcolor='yellow'>"+ k + "</td>");
+
+                }
+                else if (i%2 != 0 && j%2 == 0)
+                {
+                    document.write("<td bgcolor='yellow'>"+ k + "</td>");
+                }
+                else
+                    document.write("<td>"+ k + "</td>");
+                k++;
+            } 
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+</body>
+</html>
