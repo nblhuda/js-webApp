@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <form action=”” method=”get”>
+            Enter Range:<br>
+            From: <input type="number" id="firstNum"><br>
+            Until: <input type="number" id="secondNum"><br>
+            <input type="button" value="Sum Odd Number" onclick="sumOddNum()">
+        </form>
+        <script>
+            function sumOddNum()
+            {
+                var num1 = document.getElementById("firstNum").value;
+                var num2 = document.getElementById("secondNum").value;
+                var sumOdd = 0;
+
+                for( var i = num1; i <= num2; i++ )
+                {
+                    if(i % 2 != 0)
+                    sumOdd = sumOdd + parseInt(i);
+                }
+
+                document.write("Sum ODD integers between " + num1 + " and " +
+                num2 + " is: " + sumOdd);
+            }
+        </script>
+    </body>
+</html>
