@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>HTML and JavaScript</title>
+        <script>
+            function doSubmit(){
+                if(document.getElementById("s").checked)
+                    price=15;
+                else if(document.getElementById("m").checked)
+                    price=20;
+                else if(document.getElementById("i").checked)
+                    price=25;
+
+                if(document.getElementById("top1").checked)
+                    price=price+5;
+                if(document.getElementById("top2").checked)
+                    price = price+ 7;
+                if(document.getElementById("top3").checked)
+                    price = price+ 5;
+                if(document.getElementById("top4").checked)
+                    price = price+ 4;
+                if(document.getElementById("top5").checked)
+                    price = price+ 4;
+                if(document.getElementById("top6").checked)
+                    price = price+ 7;
+                alert("\nMY PIZZA CAFE\n==============================\n\n" +
+                "Your pizza order has been submitted\n\n" +
+                "The total price is RM " + price.toFixed(2)+
+                "\n\n==============================\n\nTHANK YOU!");
+            }
+        </script>
+    </head>
+    <body bgcolor = "B907B6">
+        <FoRM NAME="PizzaForm" method = "post" action = "">
+            <H1> My Pizza Cafe</H1>
+            <br>
+            <h4>Step 1: Enter your name, address, and phone number:</h4>
+            <FONT FACE ="Courier">
+                Name: &nbsp;&nbsp;<INPUT NAME="customer" TYPE="text" SIZE= 50><br>
+                Address:<INPUT NAME="address" TYPE="text" SIZE= 50><br>
+                City:&nbsp;&nbsp;&nbsp;<INPUT NAME= "city" TYPE="text" SIZE=16>
+                State: <select name = "state">
+                <option value = "state1">Johor</option>
+                <option value = "state2">Melaka</option>
+                <option value = "state3">Negeri Sembilan</option>
+                <option value = "state4">Selangor</option>
+                <option value = "state5">Kuala Lumpur</option>
+                <option value = "state6">Putrajaya</option>
+                <option value = "state7">Perak</option>
+                <option value = "state8">Pulau Pinang</option>
+                <option value = "state9">Kedah</option>
+                <option value = "state10">Perlis</option>
+                <option value = "state11">Kelantan</option>
+                <option value = "state12">Terengganu</option>
+                <option value = "state13">Pahang</option>
+                <option value = "state14">Sabah</option>
+                <option value = "state15">Sarawak</option>
+                </select>
+                <!--State:<INPUT NAME= "state" TYPE="text" SIZE=4>-->
+                Zip:<INPUT NAME= "zip" TYPE="text" SIZE=4><br>
+                Phone:&nbsp;&nbsp;<INPUT NAME= "phone" TYPE="text" SIZE=50>
+            </FONT>
+            <br><br>
+            <h4>Step 2: Select the size of pizza you want:</h4>
+            <FONT FACE ="Courier">
+                <INPUT NAME="size" id="s" TYPE="RADIO" >Small
+                <INPUT NAME="size" id="m" TYPE="RADIO">Medium
+                <INPUT NAME="size" id="l" TYPE="RADIO">Large<br>
+            </Font>
+            <br><br>
+            <h4>Step 3: Select the pizza topings you want:</h4>
+            <FONT FACE ="Courier">
+                <INPUT NAME="toppings" id="top1" TYPE="Checkbox">Pepperoni
+                <INPUT NAME="toppings" id="top2" TYPE="Checkbox">Sausage
+                <INPUT NAME="toppings" id="top3" TYPE="Checkbox">Mushrooms<br>
+                <INPUT NAME="toppings" id="top4" TYPE="Checkbox">Pineapple
+                <INPUT NAME="toppings" id="top5" TYPE="Checkbox">Black Olives
+                <INPUT NAME="toppings" id="top6" TYPE="Checkbox">Meatball
+            </Font>
+            <br><br>
+            <INPUT TYPE="BUTTON" VALUE="Submit Order" onclick = "doSubmit()">
+            <INPUT TYPE="reset" value="Clear Entries" >
+            </FORM>
+        </BODY>
+</html>
