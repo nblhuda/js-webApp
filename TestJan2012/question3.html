@@ -1,0 +1,30 @@
+<!-- 
+User will input a number in a textbox. If the number is less than 50, an alert box
+will pop up and display the number. (e.g: "Your number is 58"). If your number is
+greater than 50, an alert box will display "Try again, your number is too big for
+me." If the number is exactly 50, an alert box will display a message "Bingo, your
+number is exactly 50" 
+-->
+
+<html>
+    <head></head>
+    <body>
+        <script>
+            function check_num(){
+                var x = parseInt(document.guess.num.value);
+                if (x == 50) //0.5m
+                alert("Bingo, your number is exactly 50."); //0.5m
+                else if ( x < 50) //0.5m
+                alert("Your number is " + x ); //0.5m
+                else //0.5m
+                alert("Try again, your number is too big for me.");
+            }
+
+        </script>
+        <form action="" name="guess">
+            Enter a number: <input type="text" name="num"><br><br>
+            <input type="button" value="Check my num!" onClick="check_num()">
+        </form>
+    </body>
+</html>
+
