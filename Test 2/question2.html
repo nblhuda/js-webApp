@@ -1,0 +1,26 @@
+<!-- Tracing output -->
+
+<html>
+    <head></head>
+    <body>
+        <script>
+            var symbols = ['@', 'a', '?', 'b', '!', 'c', '*'];
+            for(var i=0; i<7; i=i+2)
+                document.write(symbols[i] + " ");
+
+            document.write("<br>---" + symbols.length + "---<br>");
+
+            for(var i=0; i<6; i++)
+            {
+                if(i % 2 != 0)
+                    document.write(symbols[i] + " ");
+             }
+            </script>
+    </body>
+</html>
+<!-- 
+output:
+@ ? ! *
+---7---
+a b c
+ -->
