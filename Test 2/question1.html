@@ -1,0 +1,39 @@
+<!-- 
+Develop a web page that will re-direct users to respective pages based on their age. The
+following tasks should be followed:
+a) Accept the user’s age in a text field through a form.
+b) By using the function checkAge(), check the user’s age and open its respective
+page according to the criteria below:
+        Age     Page
+        7 - 12 upsr.html
+        13 - 15 pmr.html
+        16 - 17 spm.html
+c) Display an alert message “Your age is not suitable for this website”
+if the user’s age is out of range. 
+-->
+
+<html>
+    <body>
+        <form name="studentForm">
+            Enter your age: <br>
+            <input type = "number" name = "age"> 
+            <input type = "button" value="Enter" onclick="checkAge()">
+
+        </form>
+        <script>
+            // check age function with suitable age given
+            function checkAge() 
+            {
+                var age = document.studentForm.age.value;
+                if(age >= 7 && age <= 12)
+                    window.open("upsr.html");
+                else if(age >= 13 && age <= 15)
+                    windown.open("pmr.html"); 
+                else if(age >= 16 && age <= 17)
+                    window.open("spm.html");
+                else
+                    alert("Your age is not suitable for this website");
+            }
+        </script>
+    </body>
+</html>
